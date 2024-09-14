@@ -1,6 +1,10 @@
 import React from 'react';
 
 import about from "../assets/about.jpg"
+import m1 from "../assets/m1.png"
+import m2 from "../assets/m2.png"
+import m3 from "../assets/m3.png"
+import m4 from "../assets/m4.png"
 
 const About = () => {
     return (
@@ -31,28 +35,28 @@ const About = () => {
 
                         <div className="md:w-1/2 mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
                             <div className="flex items-center gap-4">
-                                <img src="src/assets/m1.png" alt="" className="w-12 h-12" />
+                                <img src={m1} alt="" className="w-12 h-12" />
                                 <div>
                                     <h4 className="text-2xl text-neutralDGrey font-semibold">340</h4>
                                     <p>Members</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
-                                <img src="src/assets/m3.png" alt="" className="w-12 h-12" />
+                                <img src={m3} alt="" className="w-12 h-12" />
                                 <div>
                                     <h4 className="text-2xl text-neutralDGrey font-semibold">123</h4>
                                     <p>Charity Events</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
-                                <img src="src/assets/m2.png" alt="" className="w-12 h-12" />
+                                <img src={m2} alt="" className="w-12 h-12" />
                                 <div>
                                     <h4 className="text-2xl text-neutralDGrey font-semibold">34,000,000Rfw</h4>
                                     <p>Donations</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
-                                <img src="src/assets/m4.png" alt="" className="w-12 h-12" />
+                                <img src={m4} alt="" className="w-12 h-12" />
                                 <div>
                                     <h4 className="text-2xl text-neutralDGrey font-semibold">21</h4>
                                     <p>Groups</p>

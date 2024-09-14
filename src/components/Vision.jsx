@@ -1,4 +1,7 @@
 import React from 'react';
+import v1 from "../assets/v1.png"
+import v2 from "../assets/v2.png"
+import v3 from "../assets/v3.png"
 
 const Vision = () => {
 
@@ -6,21 +9,21 @@ const Vision = () => {
                             id: 1,
                             title: "Vision",
                             description: "we are here to help thos in need with our resources to make a better world",
-                            image:"src/assets/v1.png"
+                            image:v1
 
                         },
                         {
                             id: 2,
                             title: "Mission",
                             description: "we are here to help thos in need with our resources to make a better world",
-                            image:"src/assets/v2.png"
+                            image:v2
 
                         },
                         {
                             id: 3,
                             title: "Motto",
                             description: "we are here to help thos in need with our resources to make a better world",
-                            image:"src/assets/v3.png"
+                            image:v3
 
                         }]
                      
