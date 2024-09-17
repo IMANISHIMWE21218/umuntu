@@ -41,13 +41,13 @@ const Home = () => {
                                 <img 
                                     src={slide.image} 
                                     alt="" 
-                                    className="w-full h-full object-cover shadow-md rounded-md"
+                                    className="w-full h-full object-cover shadow-md rounded-md lg:mt-12"
                                 />
                             </div>
 
                             {/* Text Section */}
                             <div className="w-full md:w-1/2 mt-6 md:mt-0 p-4 md:p-6 lg:p-8">
-                                <h1 className="text-3xl md:text-4xl lg:text-4xl font-semibold text-neutralDGrey leading-tight">
+                                <h1 className="text-3xl md:text-3xl lg:text-4xl font-semibold text-neutralDGrey leading-tight">
                                     {slide.title} <br /> 
                                     <span className="text-brandPrimary">{slide.subtitle}</span>
                                 </h1>
