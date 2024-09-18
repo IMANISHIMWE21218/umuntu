@@ -1,6 +1,6 @@
 import React from 'react'
 import { Footer } from "flowbite-react";
-import { BsFacebook, BsInstagram, BsTwitter, BsWhatsapp, BsDribbble } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsTwitter, BsWhatsapp, BsYoutube } from "react-icons/bs";
 import logo from "../assets/logo.png"
 
 const FooterComponent = () => {
@@ -51,7 +51,7 @@ const FooterComponent = () => {
                     <Footer.Icon href="#" icon={BsInstagram} />
                     <Footer.Icon href="#" icon={BsTwitter} />
                     <Footer.Icon href="#" icon={BsWhatsapp} />
-                    <Footer.Icon href="#" icon={BsDribbble} />
+                    <Footer.Icon href="#" icon={BsYoutube} /> 
                 </div>
                 </div>
             </div>
