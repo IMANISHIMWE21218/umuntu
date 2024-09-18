@@ -1,19 +1,23 @@
 import React from 'react'
 import { Footer } from "flowbite-react";
-import { BsFacebook, BsInstagram, BsTwitter, BsGithub, BsDribbble } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsTwitter, BsWhatsapp, BsDribbble } from "react-icons/bs";
+import logo from "../assets/logo.png"
 
 const FooterComponent = () => {
     return (
         <Footer container>
             <div className="w-full">
                 <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-                <div>
-                    <Footer.Brand
-                    href="https://flowbite.com"
-                    src="https://flowbite.com/docs/images/logo.svg"
-                    alt="Flowbite Logo"
-                    name="Flowbite"
-                    />
+                <div className='mb-8' >
+                     <img src={logo} alt="Logo" className="md:w-22 md:h-5 w-18 h-4 inline-block items-center  mb-8" />
+                     <div className=''>
+                       <Footer.LinkGroup col>
+                        <Footer.Link href="#">Tell: +250 788000009</Footer.Link>
+                        <Footer.Link href="#">Email: umuntunikundi123@gmail.com</Footer.Link>
+                        <Footer.Link href="#">Location: kicukiro, Kigali, Rwanda</Footer.Link>
+                        </Footer.LinkGroup>
+
+                     </div>
                 </div>
                 <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
                     <div>
@@ -41,12 +45,12 @@ const FooterComponent = () => {
                 </div>
                 <Footer.Divider />
                 <div className="w-full sm:flex sm:items-center sm:justify-between">
-                <Footer.Copyright href="#" by="Flowbite™" year={2022} />
+                <Footer.Copyright href="#" by="umuntu ninkundi All rights reserved." year={2024} />
                 <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
                     <Footer.Icon href="#" icon={BsFacebook} />
                     <Footer.Icon href="#" icon={BsInstagram} />
                     <Footer.Icon href="#" icon={BsTwitter} />
-                    <Footer.Icon href="#" icon={BsGithub} />
+                    <Footer.Icon href="#" icon={BsWhatsapp} />
                     <Footer.Icon href="#" icon={BsDribbble} />
                 </div>
                 </div>
