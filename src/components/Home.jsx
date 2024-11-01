@@ -27,7 +27,7 @@ const Home = () => {
                         { 
                             image: banner3, 
                             title: "Together We Are Happy", 
-                            subtitle: "Umuntu Ni Kundi, Dukundane", 
+                            subtitle: "Umuntu Ni Nkundi, Dukundane", 
                             description: "Our foundation believes in unity and love. By helping each other, we create a happier, more supportive community. Together, we thrive and uplift those in need.", 
                             buttonText: "Our Gallery" 
                         }
