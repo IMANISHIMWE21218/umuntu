@@ -3,9 +3,9 @@ import logo from "../assets/logo.png";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import About from './pages/About';
+import About from './About';
 import WhatWeDo from './pages/WhatWeDo';
-import Contact from './pages/Contact';
+import Contact from './Contact';
 import { BrowserRouter, Link } from "react-router-dom";
 import { FaBars, FaXmark } from "react-icons/fa6";
 
