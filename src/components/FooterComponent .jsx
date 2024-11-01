@@ -12,7 +12,7 @@ const FooterComponent = () => {
                      <img src={logoo} alt="Logo" className="md:w-22 md:h-5 w-18 h-4 inline-block items-center  mb-8" />
                      <div className=''>
                        <Footer.LinkGroup col>
-                        <Footer.Link href="#">Tell: +250 788888888</Footer.Link>
+                        <Footer.Link href="#">Tell: +250 788888880</Footer.Link>
                         <Footer.Link href="#">Email: umuntunikundi123@gmail.com</Footer.Link>
                         <Footer.Link href="#">Location: kicukiro, Kigali, Rwanda</Footer.Link>
                         </Footer.LinkGroup>
