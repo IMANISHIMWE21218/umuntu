@@ -1,5 +1,4 @@
 import React from 'react';
-
 import about from "../assets/about.jpg"
 import m1 from "../assets/m1.png"
 import m2 from "../assets/m2.png"
@@ -18,7 +17,9 @@ const About = () => {
                     <div className="md:w-3/5 mx-auto">
                         <h2 className='text-3xl text-neutralDGrey font-semibold mb-4 mb-4 md:w-4/5'>About Us</h2>
                         <p className='md:w-3/4 text-sm text-neutralLGrey mb-8'>
-                            We are here to help thos in need with our resources to make a better world here to help thos in need with our resources to make a better world
+                        We are UMUNTU NI NKUNDI, a non-governmental organization established in 2019. Our mission is to support the less fortunate in our society by providing immediate relief and long-term assistance. We believe in the power of education to break the cycle of poverty and open up opportunities for a brighter future. Since our inception, we have organized 9 events, supported 45 families, and raised $800 yearly in donations. We are proud of our achievements and are committed to making a difference in the lives of those we serve. One of our key initiatives is to provide school fee assistance for students. So far, we have been able to support the education of 9 students, ensuring they have access to quality education and a chance at a better future. We are seeking partnerships to help us expand our reach and impact more families. Your support, whether in the form of financial aid, resource donation, or volunteering, can greatly contribute to our cause. In return, we offer the opportunity to enhance your corporate social responsibility profile and acknowledgment in our events and promotional materials.
+
+UMUNTU NI NKUNDI believes in the power of education to break the cycle of poverty and open up opportunities for a brighter future. Here’s how we support education
                         </p>
 
                         <button className="btn-primary">Learn More</button>
