@@ -18,7 +18,9 @@ const About = () => {
                     <div className="md:w-3/5 mx-auto">
                         <h2 className='text-3xl text-neutralDGrey font-semibold mb-4 mb-4 md:w-4/5'>About Us</h2>
                         <p className='md:w-3/4 text-sm text-neutralLGrey mb-8'>
-                            We are here to help thos in need with our resources to make a better world here to help thos in need with our resources to make a better world
+                        Established by IRAGENA NTWARI Alexis, Moses BIZIMANA, and TUYISHIME Yvette, we are a committed group of 12 people who firmly believe in the principles of unity, empathy, 
+                            and collective accountability. We are not just a team, but a family that stands together to make a difference. Twice a year, in the months of June and December, we host events where we gather modest contributions from our own means. These funds are then used to provide assistance to a minimum of five families during each event. Our help is not just a one-time act of kindness, but a continuous effort to uplift those in need. In addition to this, we have taken under our wing nine individuals for whom we cover educational expenses. We believe in the power of education and its ability to change lives. Therefore, we not only pay their school fees but also provide them with necessary school materials. This initiative is our way of investing in their future and giving them the tools they need to succeed. 
+                            We are more than just a team; we are a beacon of hope for those we serve.    
                         </p>
 
                         <button className="btn-primary">Learn More</button>
