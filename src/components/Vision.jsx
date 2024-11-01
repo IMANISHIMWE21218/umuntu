@@ -7,22 +7,36 @@ const Vision = () => {
 
   const  contentsData = [{
                             id: 1,
-                            title: "Vision",
-                            description: "we are here to help thos in need with our resources to make a better world",
+                            title: "School Fee Assistance",
+                            description: "We provide financial assistance to cover school fees for less fortunate children in primary and secondary schools. This initiative ensures that financial constraints do not hinder a child’s access to education. In the future, we aim to extend this assistance to include disabled students.",
                             image:v1
 
                         },
                         {
                             id: 2,
-                            title: "Mission",
-                            description: "we are here to help thos in need with our resources to make a better world",
+                            title: "Educational Materials",
+                            description: "In addition to school fees, we also provide necessary educational materials such as textbooks, stationery, uniforms, and other school supplies. These resources are essential for students to fully participate in their education.",
                             image:v2
 
                         },
                         {
                             id: 3,
-                            title: "Motto",
-                            description: "we are here to help thos in need with our resources to make a better world",
+                            title: "Tutoring and Mentoring",
+                            description: "Recognizing that some students may need additional academic support, we organize tutoring sessions to help them with their studies. We also have a mentoring program where volunteers provide guidance and support to students, helping them navigate their educational journey.",
+                            image:v3
+
+                        },
+                        {
+                            id: 4,
+                            title: "Scholarship Program",
+                            description: "For outstanding students who show great potential, we offer scholarships that cover not only their school fees but also other educational expenses. This encourages them to excel in their studies and pursue higher education.",
+                            image:v3
+
+                        },
+                        {
+                            id: 5,
+                            title: "Life Skills Training",
+                            description: "Beyond academic education, we also provide life skills training to equip students with essential skills such as communication, problem-solving, and leadership. These skills are crucial for their personal development and future employability.",
                             image:v3
 
                         }]
