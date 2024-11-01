@@ -13,7 +13,7 @@ const Home = () => {
                         { 
                             image: banner1, 
                             title: "Umuntu Ni Nkundi, Dufashanye", 
-                            subtitle: "Together, We ", 
+                            subtitle: "Together, We Rise ", 
                             description: "Our foundation is dedicated to supporting underprivileged students and families in need. We provide essential school materials and resources to ensure every child has the opportunity to succeed.", 
                             buttonText: "Donate" 
                         },
