@@ -38,7 +38,7 @@ const Navbar = () => {
        <header className={`w-full bg-white md:bg-transparent fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out ${isSticky ? 'shadow-md' : ''}`}>
             <nav className={`py-4 lg:px-14 ${isSticky ? 'bg-white' : 'bg-transparent'}`}>
                 <div className="flex items-center justify-between px-3 md:px-8">
-                    <a href="/" className="text-xl font-semibold flex items-center space-x-3">
+                    <a href="/donate" className="text-xl font-semibold flex items-center space-x-3">
                         <img src={logo} alt="Logo" className="md:w-22 md:h-5 w-18 h-4 inline-block items-center px-2" />
                     </a>
                     
