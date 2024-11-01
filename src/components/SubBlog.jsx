@@ -31,7 +31,7 @@ const SubBlog = () => {
 
         <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto bg-neutralSilver my-8 py-16'>
             <div className='text-center md: w-1/2 mx-auto'>
-                <h2 className='text-3xl text-neutralDGrey font-semibold mb-4'>Blog</h2>
+                <h2 className='text-3xl text-neutralDGrey font-semibold mb-4'>Our Activities</h2>
                 <p className='text-base text-neutralLGrey mb-8 md:w-3/4 mx-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
             </div>
