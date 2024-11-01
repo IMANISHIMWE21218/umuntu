@@ -20,7 +20,7 @@ const Vision = () => {
                         {
                             id: 3,
                             title: "Tutoring and Mentoring",
-                            description: "Recognizing that some students may need additional academic support, we organize tutoring sessions to help them with their studies. We also have a mentoring program where volunteers provide guidance and support to students, helping them navigate their educational journey.",
+                            description: "We organize tutoring sessions to help them with their studies. We also have a mentoring program where volunteers provide guidance and support to students, helping them navigate their educational journey.",
                             image:v3
 
                         },
