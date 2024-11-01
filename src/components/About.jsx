@@ -1,10 +1,13 @@
 import React from 'react';
-
 import about from "../assets/about.jpg"
 import m1 from "../assets/m1.png"
 import m2 from "../assets/m2.png"
 import m3 from "../assets/m3.png"
 import m4 from "../assets/m4.png"
+const Home = () => {
+    return <div>Home Page Content</div>;
+};
+
 
 const About = () => {
     return (
