@@ -1,7 +1,7 @@
 import React from 'react'
 import { Footer } from "flowbite-react";
 import { BsFacebook, BsInstagram, BsTwitter, BsWhatsapp, BsYoutube } from "react-icons/bs";
-import logo from "../assets/logoo.jpg"
+import logo from "../assets/logoo.JPG"
 
 const FooterComponent = () => {
     return (
@@ -9,7 +9,7 @@ const FooterComponent = () => {
             <div className="w-full">
                 <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                 <div className='mb-8' >
-                     <img src={logo} alt="Logo" className="md:w-22 md:h-5 w-18 h-4 inline-block items-center  mb-8" />
+                     <img src={logoo} alt="Logo" className="md:w-22 md:h-5 w-18 h-4 inline-block items-center  mb-8" />
                      <div className=''>
                        <Footer.LinkGroup col>
                         <Footer.Link href="#">Tell: +250 788000009</Footer.Link>
