@@ -9,15 +9,13 @@ const Vision = () => {
                             id: 1,
                             title: "School Fee Assistance",
                             description: "We provide financial assistance to cover school fees for less fortunate children in primary and secondary schools. This initiative ensures that financial constraints do not hinder a child’s access to education. In the future, we aim to extend this assistance to include disabled students.",
-                            image:v1
-
+                            
                         },
                         {
                             id: 2,
                             title: "Educational Materials",
                             description: "In addition to school fees, we also provide necessary educational materials such as textbooks, stationery, uniforms, and other school supplies. These resources are essential for students to fully participate in their education.",
-                            image:v2
-
+                            
                         },
                         {
                             id: 3,
