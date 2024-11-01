@@ -6,7 +6,7 @@ import v3 from "../assets/v3.png"
 const Vision = () => {
 
   const  contentsData = [{
-                            id: 1,
+                           
                             title: "School Fee Assistance",
                             description: "We provide financial assistance to cover school fees for less fortunate children in primary and secondary schools. This initiative ensures that financial constraints do not hinder a child’s access to education. In the future, we aim to extend this assistance to include disabled students.",
                             
