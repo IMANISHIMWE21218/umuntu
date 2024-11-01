@@ -26,6 +26,20 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll); // Correct cleanup
     }, []);
 
+    const App = () => {
+    return (
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/whatwedo" element={<WhatWeDo />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+        </Router>
+    );
+};
+
     // Navigation items array
     const navItems = [
         { link: "Home", path: "/home" },
