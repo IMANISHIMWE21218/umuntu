@@ -1,7 +1,7 @@
-import React from 'react'
+
 import { Footer } from "flowbite-react";
 import { BsFacebook, BsInstagram, BsTwitter, BsWhatsapp, BsYoutube } from "react-icons/bs";
-import logo from "../assets/logoo.JPG"
+import logo from "../assets/logo.png"
 
 const FooterComponent = () => {
     return (
@@ -9,11 +9,11 @@ const FooterComponent = () => {
             <div className="w-full">
                 <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                 <div className='mb-8' >
-                     <img src={logoo} alt="Logo" className="md:w-22 md:h-5 w-18 h-4 inline-block items-center  mb-8" />
+                     <img src={logo} alt="Logo" className="md:w-22 md:h-5 w-18 h-4 inline-block items-center  mb-8" />
                      <div className=''>
                        <Footer.LinkGroup col>
                         <Footer.Link href="#">Tell: +250 788888880</Footer.Link>
-                        <Footer.Link href="#">Email: umuntunikundi123@gmail.com</Footer.Link>
+                        <Footer.Link href="#">Email: info@umuntuninkundi.org</Footer.Link>
                         <Footer.Link href="#">Location: kicukiro, Kigali, Rwanda</Footer.Link>
                         </Footer.LinkGroup>
 
@@ -47,7 +47,7 @@ const FooterComponent = () => {
                 <div className="w-full sm:flex sm:items-center sm:justify-between">
                 <Footer.Copyright href="#" by="umuntu ninkundi All rights reserved." year={2024} />
                 <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-                    <Footer.Icon href="#" icon={BsFacebook} />
+                    <Footer.Icon href="https://www.facebook.com/share/omwbeKs8VAqHVzct/?mibextid=LQQJ4d" icon={BsFacebook} />
                     <Footer.Icon href="#" icon={BsInstagram} />
                     <Footer.Icon href="#" icon={BsTwitter} />
                     <Footer.Icon href="#" icon={BsWhatsapp} />

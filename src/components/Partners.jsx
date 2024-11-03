@@ -16,14 +16,15 @@ const Partners = () => {
         <div className='md:px-14 px-4 py-16 mx-w-screen-2xl items-center mx-auto'>
             < div className='text-center my-8 flex flex-col items-center'>
                 <h2 className='text-3xl text-neutralDGrey font-semibold mb-8'>Our Partners</h2>
-                <p className='md:w-3/4 text-base text-neutralLGrey  mb-8'>
-                    We are here to help thos in need with our resources to make a better world here to help thos in need with our resources to make a better world
+                <p className='md:w-3/4 text-base text-neutralDGrey  mb-8'>
+                Together with our partners, we strive to uplift those in need by leveraging our collective resources. 
+                Our commitment is to create a better world for all, ensuring that everyone has access to the support they deserve.
                 </p>
                 {/* partners logos */}
                 <div className=' grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-8 mb-8 mx-auto '>
                     {
                         partners.map((items) => 
-                             <div key={items.id}> 
+                             <div key={items.id} > 
                              <img className='w-auto h-[55px]' src={items.partner_img} alt=""  />
                             </div>
                         )

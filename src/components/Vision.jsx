@@ -1,4 +1,4 @@
-import React from 'react';
+
 import v1 from "../assets/v1.png"
 import v2 from "../assets/v2.png"
 import v3 from "../assets/v3.png"
@@ -7,35 +7,21 @@ const Vision = () => {
 
   const  contentsData = [{
                             id: 1,
-                            title: "School Fee Assistance",
-                            description: "We provide financial assistance to cover school fees for less fortunate children in primary and secondary schools. This initiative ensures that financial constraints do not hinder a child’s access to education. We aim to extend this assistance to include disabled students too.",
+                            title: "Mission",
+                            description: "UMUNTU NI NKUNDI’s mission is to bring together the less fortunate in society and provide them with the necessary support. They organize biannual events to pool small donations and extend help to at least five families per event.",
                             image:v1
                         },
                         {
                             id: 2,
-                            title: "Educational Materials",
-                            description: "In addition to school fees, we also provide necessary educational materials such as textbooks, stationery, uniforms, and other school supplies. These resources are essential for students to fully participate in their education.",
+                            title: "Vision",
+                            description: "The foundation creates sustainable solutions with a long-term impact. This includes providing immediate relief and empowering individuals through education, skill development, community engagement, and partnerships for progress.",
                             image:v2
                         },
                         {
                             id: 3,
-                            title: "Tutoring and Mentoring",
-                            description: "We organize tutoring sessions to help them with their studies. We also have a mentoring program where volunteers provide guidance and support to students, helping them navigate their educational journey.",
+                            title: "Motto",
+                            description: "Humanity is Love: Together, We Care and Share.",
                             image:v3
-
-                        },
-                        {
-                            id: 4,
-                            title: "Scholarship Program",
-                            description: "For outstanding students who show great potential, we offer scholarships that cover not only their school fees but also other educational expenses. This encourages them to excel in their studies and pursue higher education.",
-                            image:v1
-
-                        },
-                        {
-                            id: 5,
-                            title: "Life Skills Training",
-                            description: "We also provide life skills training to equip students with essential skills such as communication, problem-solving, and leadership. These skills are crucial for their personal development and future employability.",
-                            image:v2
 
                         }]
                      
