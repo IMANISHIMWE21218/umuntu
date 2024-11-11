@@ -9,16 +9,18 @@ import SubBlog from './components/SubBlog';
 import NewsLetter from './components/NewsLetter';
 import FooterComponent from './components/FooterComponent ';
 import Model from './components/Model';
+import PropTypes from 'prop-types';
 
 import { BrowserRouter } from "react-router-dom";
 
-const App = () => {
+const App = ({setIsMenuOpen}) => {
   const [showModel, setShowModel] = useState(false);
 
   // Function to open the modal
   const handleOpenModel = () => {
     console.log("Modal opened");
     setShowModel(true);
+    setIsMenuOpen(false);
   };
 
   // Function to close the modal
@@ -43,6 +45,10 @@ const App = () => {
       </div>
     </BrowserRouter>
   );
+};
+
+App.propTypes = {
+  setIsMenuOpen: PropTypes.func.isRequired, // Ensure setIsMenuOpen is a function and required
 };
 
 export default App;

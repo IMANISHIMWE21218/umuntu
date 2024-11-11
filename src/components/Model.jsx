@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
 import { FaTimes } from 'react-icons/fa';
 // import '../src/App.css';

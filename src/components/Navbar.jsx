@@ -13,6 +13,11 @@ const Navbar = ({ handleOpenModel }) => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const handleDonateClick = () => {
+        setIsMenuOpen(false); // Close the menu
+        handleOpenModel(); // Open the modal
+    };
+
     // Handle scroll for sticky effect
     useEffect(() => {
         const handleScroll = () => {
@@ -84,6 +89,9 @@ const Navbar = ({ handleOpenModel }) => {
                                 {item.link}
                             </Link>
                         ))}
+                        <div className="items-center">
+                        <button onClick={handleDonateClick} className="bg-gray900 text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">Donate</button>
+                    </div>
                     </div>
                 </div>
             </nav>
