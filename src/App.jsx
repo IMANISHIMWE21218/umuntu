@@ -31,7 +31,7 @@ const App = () => {
     <BrowserRouter>
       <div>
         <Navbar handleOpenModel={handleOpenModel} />
-        <Home />
+        <Home handleOpenModel={handleOpenModel} />
         <Vision />
         <About />
         {/* Render the modal conditionally */}

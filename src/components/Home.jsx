@@ -1,10 +1,12 @@
+import React from 'react';
 import { Carousel } from "flowbite-react";
+import PropTypes from 'prop-types';
 
 import banner1 from "../assets/1.jpeg";
 import banner2 from "../assets/2.jpeg";
 import banner3 from "../assets/3.jpeg";
 
-const Home = () => {
+const Home = ({ handleOpenModel }) => {
     return (
         <div className="bg-neutralSilver">
             <div className="flex flex-col min-h-screen h-[740px] md:h-[600px] lg:h-[600px] w-full md:w-11/12 justify-center mx-auto py-4 md:py-8">
@@ -54,7 +56,19 @@ const Home = () => {
                                 <p className="text-base md:text-base lg:text-lg text-neutralGrey mt-4">
                                     {slide.description}
                                 </p>
-                                <button className="btn-primary mt-6">{slide.buttonText}</button>
+                                <button 
+                                    className="btn-primary mt-6" 
+                                    onClick={() => {
+                                        if (slide.buttonText === "Donate") {
+                                            console.log("Donate button clicked");
+                                            handleOpenModel();
+                                        } else {
+                                            console.log("Button text is not Donate");
+                                        }
+                                    }}
+                                >
+                                    {slide.buttonText}
+                                </button>
                             </div>
                         </div>
                     ))}
@@ -62,6 +76,10 @@ const Home = () => {
             </div>
         </div>
     );
+};
+
+Home.propTypes = {
+    handleOpenModel: PropTypes.func.isRequired, 
 };
 
 export default Home;
