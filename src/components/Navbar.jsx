@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
-import { BrowserRouter, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { FaBars, FaXmark } from "react-icons/fa6";
-const Navbar = () => {
+const Navbar = ({ handleOpenModel }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
+    // const [showModel, setShowModel] = useState(false);
 
     // Toggle menu function
     const toggleMenu = () => {
@@ -33,6 +35,7 @@ const Navbar = () => {
         { link: "Contact", path: "/contact" },
     ];
 
+   
     return (
        <header className={`w-full bg-white md:bg-transparent fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out ${isSticky ? 'shadow-md' : ''}`}>
             <nav className={`py-4 lg:px-14 ${isSticky ? 'bg-white' : 'bg-transparent'}`}>
@@ -58,7 +61,7 @@ const Navbar = () => {
 
                     {/* Buttons for large device */}
                     <div className="space-x-12 hidden lg:flex items-center">
-                        <button className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">Donate</button>
+                        <button onClick={handleOpenModel} className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">Donate</button>
                     </div>
 
                     {/* Hamburger menu only mobile */}
@@ -86,6 +89,10 @@ const Navbar = () => {
             </nav>
         </header>
     );
+};
+
+Navbar.propTypes = {
+    handleOpenModel: PropTypes.func.isRequired, // Ensure handleOpenModel is a function and required
 };
 
 export default Navbar;
