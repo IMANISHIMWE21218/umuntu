@@ -25,12 +25,12 @@ const Model = ({onClose}) => {
 
         {/* MoMo Donation */}
         <div className="mb-6">
-          <p className="text-gray-700 font-medium mb-2">Donate with MoMo:</p>
+          <p className="text-gray-700 font-medium mb-2"  >Donate with MoMo:</p>
           <p className="text-lg font-semibold text-yellow-500">*182*1*4#</p>
         </div>
 
         {/* PayPal Button */}
-        <button 
+        <button onClick={() => (window.location.href = "https://www.paypal.com/donate/?hosted_button_id=NEDFTTWSPARFG")}
          
           className="bg-brandPrimary text-white py-2 px-4 rounded-md hover:bg-sky-800 w-full mb-4"
         >
