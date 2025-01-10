@@ -8,7 +8,7 @@ import banner3 from "../assets/3.jpeg";
 
 const Home = ({ handleOpenModel }) => {
     return (
-        <div className="bg-neutralSilver">
+        <div className="bg-neutralSilver"  id="home">
             <div className="flex flex-col min-h-screen h-[740px] md:h-[600px] lg:h-[600px] w-full md:w-11/12 justify-center mx-auto py-4 md:py-8">
                 <Carousel className="w-full mx-auto">
                     {[

@@ -1,106 +1,164 @@
-import  { useState, useEffect } from "react";
+// Navbar.jsx
+import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
-import {  Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import { FaBars, FaXmark } from "react-icons/fa6";
+
 const Navbar = ({ handleOpenModel }) => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isSticky, setIsSticky] = useState(false);
-    // const [showModel, setShowModel] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-    // Toggle menu function
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
-    const handleDonateClick = () => {
-        setIsMenuOpen(false); // Close the menu
-        handleOpenModel(); // Open the modal
-    };
+  const handleDonateClick = () => {
+    setIsMenuOpen(false);
+    handleOpenModel();
+  };
 
-    // Handle scroll for sticky effect
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 100) {
-                setIsSticky(true);
-            } else {
-                setIsSticky(false);
-            }
-        };
+  useEffect(() => {
+    const handleScroll = () => setIsSticky(window.scrollY > 100);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll); // Correct cleanup
-    }, []);
+  const navItems = [
+    { label: "Home", to: "home", isRoute: false },
+    { label: "About", to: "about", isRoute: false },
+    { label: "What We Do", to: "whatwedo", isRoute: false },
+    { label: "Contact", to: "/contact", isRoute: true }
+  ];
 
-    // Navigation items array
-    const navItems = [
-        { link: "Home", path: "/home" },
-        { link: "About", path: "/about" },
-        { link: "What We Do", path: "/whatwedo" },
-        { link: "Contact", path: "/contact" },
-    ];
+  const handleNavClick = (item) => {
+    if (item.isRoute) {
+      navigate(item.to);
+    } else if (location.pathname !== '/') {
+      navigate('/');
+      // Small delay to ensure navigation completes
+      setTimeout(() => {
+        const element = document.getElementById(item.to);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+    setIsMenuOpen(false);
+  };
 
-   
+  const renderNavLink = (item) => {
+    if (item.isRoute) {
+      return (
+        <RouterLink
+          to={item.to}
+          className="text-base text-gray-900 hover:text-brandPrimary font-medium cursor-pointer"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {item.label}
+        </RouterLink>
+      );
+    }
+
+    if (location.pathname === '/') {
+      return (
+        <ScrollLink
+          to={item.to}
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          className="text-base text-gray-900 hover:text-brandPrimary font-medium cursor-pointer"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          {item.label}
+        </ScrollLink>
+      );
+    }
+
     return (
-       <header className={`w-full bg-white md:bg-transparent fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out ${isSticky ? 'shadow-md' : ''}`}>
-            <nav className={`py-4 lg:px-14 ${isSticky ? 'bg-white' : 'bg-transparent'}`}>
-                <div className="flex items-center justify-between px-3 md:px-8">
-                    <a href="/" className="text-xl font-semibold flex items-center space-x-3">
-                        <img src={logo} alt="Logo" className="md:w-22 md:h-5 w-18 h-4 inline-block items-center px-2" />
-                    </a>
-                    
-                    {/* Navigation items for large device */}
-                    <ul className="md:flex space-x-12 hidden">
-                        {navItems.map((item, index) => (
-                            <Link to={item.path}
-                                spy={true}
-                                smooth={true} 
-                                offset={-100}
-                                key={index}
-                                className="block text-base text-gray-900 hover:text-brandPrimary first:font-medium"
-                            >
-                                {item.link}
-                            </Link>
-                        ))}
-                    </ul>
-
-                    {/* Buttons for large device */}
-                    <div className="space-x-12 hidden lg:flex items-center">
-                        <button onClick={handleOpenModel} className="bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">Donate</button>
-                    </div>
-
-                    {/* Hamburger menu only mobile */}
-                    <div className="md:hidden">
-                        <button className="text-neutralDGrey focus:outline-none focus:text-gray-500" onClick={toggleMenu}>
-                            {isMenuOpen ? <FaXmark className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
-                        </button>
-                    </div>
-
-                    {/* Navigation items for mobile */}
-                    <div className={`space-y-4 py-10 px-8 mt-16 bg-brandPrimary z-50 ${isMenuOpen ? 'block fixed top-0 left-0 right-0 ' : 'hidden'}`}>
-                        {navItems.map((item, index) => (
-                            <Link to={item.path}
-                                spy={true}
-                                smooth={true} 
-                                offset={-100}
-                                key={index}
-                                className="block text-base text-white hover:text-gray-900 first:font-medium"
-                            >
-                                {item.link}
-                            </Link>
-                        ))}
-                        <div className="items-center">
-                        <button onClick={handleDonateClick} className="bg-gray900 text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey">Donate</button>
-                    </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
+      <button
+        onClick={() => handleNavClick(item)}
+        className="text-base text-gray-900 hover:text-brandPrimary font-medium cursor-pointer"
+      >
+        {item.label}
+      </button>
     );
+  };
+
+  return (
+    <header className={`w-full fixed top-0 left-0 right-0 transition-all duration-300 z-50 ${
+      isSticky ? "bg-white shadow-md" : "bg-transparent"
+    }`}>
+      <nav className="py-4 lg:px-14">
+        <div className="flex items-center justify-between px-3 md:px-8">
+          {/* Logo */}
+          <RouterLink to="/" className="flex items-center space-x-3">
+            <img
+              src={logo}
+              alt="Logo"
+              className="md:w-22 md:h-5 w-18 h-4 px-2"
+            />
+          </RouterLink>
+
+          {/* Desktop Navigation */}
+          <ul className="hidden md:flex space-x-12">
+            {navItems.map((item, index) => (
+              <li key={index}>
+                {renderNavLink(item)}
+              </li>
+            ))}
+          </ul>
+
+          {/* Donate Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <button
+              onClick={handleOpenModel}
+              className="bg-brandPrimary text-white py-2 px-4 rounded hover:bg-neutralDGrey transition-all duration-300"
+            >
+              Donate
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-neutralDGrey focus:outline-none"
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            {isMenuOpen ? <FaXmark className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className={`md:hidden fixed top-0 left-0 right-0 bg-brandPrimary z-50 transition-all duration-300 ${
+          isMenuOpen ? "block py-10 px-8 mt-16" : "hidden"
+        }`}>
+          <ul className="space-y-4">
+            {navItems.map((item, index) => (
+              <li key={index} className="text-white">
+                {renderNavLink(item)}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-6">
+            <button
+              onClick={handleDonateClick}
+              className="bg-gray-900 text-white py-2 px-4 rounded hover:bg-neutralDGrey transition-all duration-300 w-full"
+            >
+              Donate
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
 };
 
 Navbar.propTypes = {
-    handleOpenModel: PropTypes.func.isRequired, // Ensure handleOpenModel is a function and required
+  handleOpenModel: PropTypes.func.isRequired
 };
 
 export default Navbar;

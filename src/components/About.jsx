@@ -7,8 +7,8 @@ import m4 from "../assets/m4.png"
 
 const About = () => {
     return (
-        <div>
-            <div className=" mx-auto ">
+        <div id="about">
+            <div className=" mx-auto " id="about">
                 {/* About and description */}
                 <div className=" px-4 lg:px-14 mx-auto flex flex-col md:flex-row justify-between items-center gap-12 pb-12">
                 <div className="md:w-2/3 py-8 mx-auto">
