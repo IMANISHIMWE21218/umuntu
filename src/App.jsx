@@ -12,6 +12,7 @@ import Model from './components/Model';
 import Contact from './components/independentPages/Contact';
 import PropTypes from 'prop-types';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import FooterComponent from './components/FooterComponent ';
 
 // Create a separate component for the main content
 const MainContent = ({ showModel, handleOpenModel, handleCloseModel }) => {
@@ -24,6 +25,7 @@ const MainContent = ({ showModel, handleOpenModel, handleCloseModel }) => {
       <Partners />
       <SubBlog />
       <NewsLetter />
+      <FooterComponent />
     </>
   );
 };
