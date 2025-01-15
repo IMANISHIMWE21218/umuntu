@@ -1,4 +1,3 @@
-// App.jsx
 import { useState } from 'react';
 import '../src/App.css';
 import Navbar from './components/Navbar';
@@ -51,20 +50,30 @@ const App = ({setIsMenuOpen}) => {
 
   return (
     <BrowserRouter>
-      <Navbar handleOpenModel={handleOpenModel} />
-      <Routes>
-        <Route 
-          path="/" 
-          element={
-            <MainContent 
-              showModel={showModel}
-              handleOpenModel={handleOpenModel}
-              handleCloseModel={handleCloseModel}
-            />
-          } 
-        />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div className="relative">
+        <Navbar handleOpenModel={handleOpenModel} />
+        <Routes>
+          <Route 
+            path="/" 
+            element={
+              <MainContent 
+                showModel={showModel}
+                handleOpenModel={handleOpenModel}
+                handleCloseModel={handleCloseModel}
+              />
+            } 
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+                <Contact />
+                {showModel && <Model onClose={handleCloseModel} />}
+              </>
+            }
+          />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 };
