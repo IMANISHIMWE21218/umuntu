@@ -19,7 +19,7 @@ const Contact = () => {
     <>
       <div className="relative overflow-hidden mt-32">
         <div className="container px-6 md:px-12 mb-12">
-          <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-md md:py-16 md:px-12 backdrop-blur-[30px] border border-gray-300">
+          <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-md md:py-16 md:px-12 backdrop-blur-[30px] border border-gray-300 w-full">
             <div className="flex flex-wrap">
               {/* Contact Form */}
               <div className="w-full lg:w-6/12 mb-12 lg:mb-0 px-4">
